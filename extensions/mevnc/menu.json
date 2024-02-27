@@ -1,0 +1,15 @@
+{
+	"comment001": "zyyme kindle vnc",
+	"items": [{
+		"name": "咩咩VNC",
+		"priority": -1,
+		"items": [
+{"name": "Server Start 服务端启动", "priority": 1, "exitmenu": false, "checked": true, "action": "/mnt/us/extensions/mevnc/bin/server.sh"},
+{"name": "Server Stop 服务端停止", "priority": 2, "exitmenu": false, "checked": true, "action": "killall -9 x11vnc"},
+{"name": "Client Start 客户端启动", "priority": 3, "action": "/mnt/us/extensions/mevnc/bin/client.sh"},
+{"name": "Client Stop 客户端停止", "priority": 4, "exitmenu": false, "checked": true, "action": "killall kindlevncviewer"},
+{"name": "Toggle Color 反色", "priority": 5, "exitmenu": false, "action": "fbdepth -q -H toggle && fbink -q -s -f"},
+{"name": "Show IP 显示IP", "priority": 2, "exitmenu": false, "checked": true, "action": "eips 7 1 \"IP: `ifconfig wlan0 | grep 'inet addr' | awk -F '[ :]' '{print $13}'`\""}
+		]
+	}]
+}
