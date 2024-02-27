@@ -9,5 +9,5 @@ fbdepth -q -H toggle
 ./kindlevncviewer -config config.lua "$@"
 fbdepth -q -H toggle
 fbink -q -s -f
-lipc-set-propl com.lab126.powerd preventScreenSaver 0
+lipc-set-prop com.lab126.powerd preventScreenSaver 0
 ps -ef | grep refresh.sh | awk '{system("kill "$2)}'
